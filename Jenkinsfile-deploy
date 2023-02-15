@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage('Download Index'){
       steps{
-        sh 'wget -O index.html https://raw.githubusercontent.com/notarnic/prog1-nginx/main/index.html?token=GHSAT0AAAAAAB5VDETYUNND7J7YTED72QXAY7M4MOA'
+        sh 'wget -O index.html https://raw.githubusercontent.com/notarnic/prog1-nginx/main/index.html?token=GHSAT0AAAAAAB5VDETYIALBGTTQ5WJPREGQY7M44EA'
       }
     }
     stage('RUN'){
