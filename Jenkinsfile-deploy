@@ -20,7 +20,7 @@ pipeline{
     }
     stage('Docker CP'){
       steps{
-        sh 'docker cp index.html prog1:/usr/share/nginx/index.html'
+        sh 'docker cp index.html prog1:/usr/share/nginx/html/index.html'
       }
     }
   }
