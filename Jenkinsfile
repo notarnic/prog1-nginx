@@ -6,10 +6,7 @@ pipeline{
   stages{
     stage('Test'){
       steps{
-        sh 'apt update'
-        sh 'apt install -y wget'
-        sh 'wget -O index.html https://raw.githubusercontent.com/notarnic/prog1-nginx/main/index.html?token=GHSAT0AAAAAAB5VDETYUNND7J7YTED72QXAY7M4MOA'
-        sh 'cp index.html /usr/share/nginx/html/index.html'
+        sh 'echo ciao > /usr/share/nginx/index.html'
       }
     }
   }
