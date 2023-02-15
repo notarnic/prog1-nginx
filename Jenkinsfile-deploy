@@ -1,0 +1,21 @@
+pipeline{
+  agent any
+
+  stages{
+    stage('Download Index'){
+      steps{
+        sh 'wget -O index.html https://raw.githubusercontent.com/notarnic/prog1-nginx/main/index.html?token=GHSAT0AAAAAAB5VDETYUNND7J7YTED72QXAY7M4MOA'
+      }
+    }
+    stage('RUN'){
+      steps{
+        sh 'docker run -d --name prog1 -p 8000:80 nginx'
+      }
+    }
+    stage('Docker CP'){
+      steps{
+        sh 'docker cp index.html prog1:/usr/share/nginx/index.html'
+      }
+    }
+  }
+}
